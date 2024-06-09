@@ -1,18 +1,21 @@
-var counter = 1;
-var counter2 = 1;
 
-function printCounter() {
-    console.clear()
-    console.log(counter);
-    counter = counter + 1;
-    
+// converting string to array
+
+function arrayFromString(str) {
+    var array = str.split(" "); // here space is delimeter
+    return array
 }
 
-setInterval(printCounter , 1000)
+var ans = arrayFromString("my name is pratik")
+console.log(ans)
 
+// converting array to string
 
-for(var i = 0; i<1000;i++){
-    counter2 = counter2 + 1;
+function stringFromArray(str) {
+    var array = str.join(" "); // here space is delimeter
+    return array
 }
 
-console.log(counter2)
+var ans = stringFromArray([ 'my', 'name', 'is', 'pratik' ])
+console.log(ans)
+
