@@ -15,8 +15,6 @@ function calculateTime(n) {
         ans += i
     }
 
-    
-
     const endTime = new Date().getTime();
 
     totalTime = endTime - startTime;
