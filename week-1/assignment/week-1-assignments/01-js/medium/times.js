@@ -8,5 +8,22 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+    const startTime = new Date().getTime();
+
+    var ans = 0
+    for(var i=1;i<=n;i++){
+        ans += i
+    }
+
+    
+
+    const endTime = new Date().getTime();
+
+    totalTime = endTime - startTime;
+    totalTime = totalTime / 1000;
+    var timeTaken = "Addition for 1 to "+n+" is: "+ans+"\ntime required: "+ totalTime+" sec";
+    return timeTaken ;
+
 }
+
+console.log(calculateTime(10000000000))
