@@ -9,7 +9,21 @@ function solve(transactions){
             spendEstimates[t.category] = t.price
         }
     }
-    console.log(spendEstimates)
+    // console.log(spendEstimates)
+    var keys = Object.keys(spendEstimates)
+    // console.log(spendEstimates);
+    // console.log(keys);
+
+    let answer = [];
+    for(var i=0; i<keys.length;i++){
+        var category = keys[i];
+        var obj = {
+            category: category,
+            amountSpend: spendEstimates[category]
+        }
+        answer.push(obj)
+    }
+    console.log(answer);
 }
 
 var transactions = [
